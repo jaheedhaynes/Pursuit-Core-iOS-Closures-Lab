@@ -71,7 +71,9 @@ assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutp
 
 // Write a function called sortedNamesByLastName(in:) that takes in an array of tuples of type (String, String) and returns an array of tuples sorted by last name.
 
-// Your function here
+func sortedNamesByLastName(in:([(firstname: String , lastname: String)]) -> [(lastname: String , firstname: String)]) {
+    
+}
 
 // Uncomment out the following lines to check your solution
 
