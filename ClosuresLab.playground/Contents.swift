@@ -45,14 +45,26 @@ assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTw
 
 // Write a function called largestValue(in:) that finds the largest Int in an array of Ints. Use reduce to solve this exercise.
 
-// Your function here
+func largestValue (in numbers: [Int]) -> Int {
+    var results = 0
+    
+     guard let first = numbers.first else { return -1 }
+    results = numbers.reduce(first) { prevValue, currentValue in
+        if prevValue > currentValue {
+            return prevValue
+        } else {
+            return currentValue
+        }
+    }
+    return results
+}
 
 // Uncomment out the following lines to check your solution
 
-//let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
-//let expectedOutputThree = 9
-//let outputThree = largestValue(in: moreNumbers)
-//assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
+let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
+let expectedOutputThree = 9
+let outputThree = largestValue(in: moreNumbers)
+assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
 
 
 // Question Four
